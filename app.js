@@ -31,6 +31,7 @@ app.get('/', (req, res) => {
 
       files.push(new Entry(file, path.join(url, file)));
     }
+
     return res.render('index', {files});
   });
 });

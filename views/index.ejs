@@ -13,20 +13,22 @@
             <div class="row">
                 <a class="btn" style="width: 100%;" id="back-link">Назад</a>
             </div>
-
-            <div class="row">
+            <% if (files.filter(x => x.type === 'directory').length > 0 ) { %>
                 <div>Категории</div>
                 <hr>
-                <div>
+                <div class="row" style="text-align: center;">
                     <% for (const file of files.filter(x => x.type === 'directory')) {%>
-                        <a class="btn" href="<%= file.link %>"><%= file.filename %></a>
+                        <a class="btn blue lighten-1 col s3" style="margin: 3px; height: 55px; max-width: 220px;" href="<%= file.link %>"><%= file.filename %></a>
                     <% } %>
                 </div>
-            </div>
+            <% } %>
+
 
             <div class="row">
+                <div>Файлы</div>
+                <hr>
                 <% for (const file of files.filter(x => x.type === 'file')) {%>
-                    <a class="file" href="<%= file.link %>"><%= file.filename %></a>
+                    <a class="file btn" href="<%= file.link %>"><%= file.filename %></a>
                 <% } %>    
             </div>
     
