@@ -1,0 +1,22 @@
+{
+  "name": "node-infomat",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "evas1on <evas1on.xd@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "materialize-css": "^1.0.0-rc.2",
+    "pdf.js": "^0.1.0"
+  }
+}
