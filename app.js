@@ -12,6 +12,7 @@ app.use('/materialize', Express.static(path.join(__dirname,
     'dist')));
 
 app.use('/media', Express.static(path.join(__dirname, 'media')));
+app.use('/static', Express.static(path.join(__dirname, 'static')));
 
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
@@ -22,7 +23,6 @@ app.get('/', (req, res) => {
   const files = [];
 
   fs.readdir(url, async (err, filedata) => {
-    console.log(filedata);
     for (const file of filedata) {
       if (fs.lstatSync(path.join(url, file)).isDirectory()) {
         files.push(new Entry(file, `?dir=${query}/${file}`, 'directory'));
